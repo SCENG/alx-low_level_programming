@@ -11,14 +11,12 @@ int main(void)
 
 	while (lower <= 'z')
 	{
-		/*this loop prints lowercase alphabet*/
 		putchar(lower);
 		lower++;
 	}
 
 	while (upper <= 'Z')
 	{
-		/*this loop print uppercase alphabet*/
 		putchar(upper);
 		upper++;
 	}
