@@ -6,19 +6,28 @@
  * main - Entry point
  * Return: 0
  */
+
 int main(void)
 {
 	int n;
-	int lastNum;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
-	if (lastNum > 5)
-		printf("last digit of %d is %d and is greater than 5\n", n, lastNum);
-	else if (lastNum == 0)
-		printf("last digit of %d is %d and is 0\n", n, lastNum);
+	printf("Last digit of %d is %d and is ", n, (n % 10));
+
+	if ((n % 10) == 0)
+	{
+		printf("0\n");
+	}
+	else if ((n % 10) > 5)
+	{
+		printf("greater than 5\n");
+	}
 	else
-		printf("last digit of %d is %d and is less than 6 and not 0\n", n, lastNum);
+	{
+		printf("less than 6 and not 0\n");
+	}
+
 	return (0);
 }
