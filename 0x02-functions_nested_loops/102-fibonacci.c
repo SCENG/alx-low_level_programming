@@ -8,18 +8,25 @@
 
 int main(void)
 {
-	unsigned long i, fib1, fib2;
-	fib1 = 1;
-	fib2 = 2;
+	long i = 0;
+	long j = 1;
+	int n = 0;
+	long fib;
 
-	printf("%lu", fib1);
-
-	for (i = 0; i < 50; i++)
+	while (n < 50)
 	{
-		printf(", %lu", fib2);
-		fib2 += fib1;
-		fib1 = fib2 - fib1;
+		fib = i + j;
+		if (n != 49)
+		{
+			printf("%lu, ", fib);
+		}
+		else
+		{
+			printf("%lu\n", fib);
+		}
+		i = j;
+		j = fib;
+		n += 1;
 	}
-	printf("\n");
 	return (0);
 }
