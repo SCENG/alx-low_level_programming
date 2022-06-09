@@ -15,7 +15,7 @@ int main(void)
 
 	for (counter = 1; counter <= (countto / 2); counter++)
 	{
-		printf("%ld %ld ", a, b);
+		printf("%ld, %ld ", a, b);
 		a += b;
 		b += a;
 	}
