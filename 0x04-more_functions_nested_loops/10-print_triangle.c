@@ -7,14 +7,16 @@
 
 void print_triangle(int size)
 {
-	int height, width, draw;
+	int height;
+	int width;
+	int draw;
 
 	if (size <= 0)
 		_putchar('\n');
 
-	for (height = 1; width <= size; height++)
+	for (height = 1; height <= size; height++)
 	{
-		for (width = i; width <= (size - height); width++)
+		for (width = 1; width <= (size - height); width++)
 			_putchar(' ');
 
 		for (draw = 1; draw <= height; draw++)
