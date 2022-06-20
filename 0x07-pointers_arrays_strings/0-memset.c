@@ -11,7 +11,16 @@
  */
 
 char *_memset(char *s, char b, unsigned int n)
-
 {
-	return (memset(s + n, b, n * sizeof(char)));
+	int size = n; /* only accept positive sizes */
+
+	if (size > 0)
+	{
+		int i;
+
+		for (i = 0; i < size; i++)
+			s[i] = b;
+	}
+
+	return (s);
 }
