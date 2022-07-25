@@ -9,6 +9,17 @@
  *  correspond to the e_ident member.
 */
 
+void check_elf(unsigned char *e_ident);
+void print_magic(unsigned char *e_ident);
+void print_class(unsigned char *e_ident);
+void print_data(unsigned char *e_ident);
+void print_version(unsigned char *e_ident);
+void print_abi(unsigned char *e_ident);
+void print_osabi(unsigned char *e_ident);
+void print_type(unsigned int e_type, unsigned char *e_ident);
+void print_entry(unsigned long int e_entry, unsigned char *e_ident);
+void close_elf(int elf);
+
 /**
  * check_if_elf - checks if file is an ELF file by checking if it
  *                contains the magic numbers/file signature of an ELF file
@@ -336,6 +347,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	print_abi(elf->e_ident);
 	print_type(elf->e_type, elf->e_ident);
 	print_entry(elf->e_entry, elf->e_ident);
+
 	free(elf);
 	close_file(elf_file);
 	return (0);
