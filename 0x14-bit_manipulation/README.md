@@ -42,7 +42,6 @@
 5. [101](./5-flip_bits.c) : A function that returns the number of bits you would need to flip to get from one number to another.
 	- Prototype: `unsigned int flip_bits(unsigned long int n, unsigned long int m);`
 	- You are not allowed to use the `%` or `/` operators.
-	- If you are here for a solution for ALX, [checker version](https://github.com/iAmG-r00t/alx-low_level_programming/blob/0377351dc5aa5ff7bf5f41869b69165c878d5a36/0x14-bit_manipulation/5-flip_bits.c).
 6. [Endianness](./100-get_endianness.c) : A function that checks the endianness.
 	- Prototype: `int get_endianness(void);`
 	- Returns: `0` if big endian, `1` if little endian.
